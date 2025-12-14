@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-black-100 shadow-sm">
+    <div className="navbar bg-black-100 shadow-sm md:max-w-[80vw] mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -40,7 +40,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-3xl hover:bg-indigo-900 hover:text-white hover:border-0">
+        <a className="btn btn-ghost text-3xl hover:bg-[#1f2437] hover:text-white">
           <span className="text-[#8bbdfa] font-extrabold hover:text-[#8bbdfa]">
             Auction
           </span>
@@ -64,7 +64,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn text-lg bg-blue-200 border-0 px-7 py-5 rounded-4xl font-bold">
+        <a className="btn text-lg text-black bg-blue-200 border-0 px-7 py-5 rounded-4xl font-bold">
           Log In
         </a>
       </div>

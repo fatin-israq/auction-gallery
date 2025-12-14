@@ -13,9 +13,9 @@ const Hero = () => {
         }}
       ></div>
       <div className="hero-overlay"></div>
-      <div className="hero-content text-neutral-content text-left justify-start pl-0 ml-0">
-        <div className="max-w-4/5">
-          <h1 className="mb-5 text-6xl font-bold max-w-5/6 text-[#F5F5F5]">
+      <div className="hero-content text-neutral-content text-center lg:text-left justify-start">
+        <div className="md:max-w-4/5">
+          <h1 className="mb-5 text-5xl md:text-6xl font-bold md:max-w-5/6 text-[#F5F5F5]">
             Bid on Unique Items from Around the World
           </h1>
           <p className="mb-5 text-2xl text-[#D1D5DB]">
