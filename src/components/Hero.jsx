@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="hero min-h-[70vh] relative">
       <div
-        className="absolute inset-0 blur-xs -scale-x-100"
+        className="absolute inset-0 blur-xs -scale-x-100 brightness-50"
         style={{
           backgroundImage:
             "url(https://images.unsplash.com/photo-1514195037031-83d60ed3b448?q=80&w=2371&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
