@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaRegHeart } from "react-icons/fa";
 
-const Items = () => {
+const Items = ({ handleFav }) => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -40,7 +40,12 @@ const Items = () => {
               <td>${item.current_bid}</td>
               <td>{item.time_left}</td>
               <th>
-                <button className="btn btn-ghost btn-xs">
+                <button
+                  className="btn btn-ghost btn-xs"
+                  onClick={() => {
+                    handleFav(item);
+                  }}
+                >
                   <FaRegHeart size={18} className="text-gray-400" />
                 </button>
               </th>
