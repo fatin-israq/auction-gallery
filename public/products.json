@@ -4,69 +4,79 @@
     "name": "Vintage Leica M3 Camera",
     "current_bid": 1000,
     "time_left": 2,
-    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
+    "bids": 9
   },
   {
     "id": 2,
     "name": "Antique Wooden Wall Clock",
     "current_bid": 450,
     "time_left": 5,
-    "image": "https://images.unsplash.com/photo-1503602642458-232111445657"
+    "image": "https://images.unsplash.com/photo-1503602642458-232111445657",
+    "bids": 6
   },
   {
     "id": 3,
     "name": "Classic Vinyl Record Player",
     "current_bid": 320,
     "time_left": 3,
-    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4"
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4",
+    "bids": 7
   },
   {
     "id": 4,
     "name": "Retro Typewriter",
     "current_bid": 280,
     "time_left": 6,
-    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
+    "bids": 3
   },
   {
     "id": 5,
     "name": "Handcrafted Leather Briefcase",
     "current_bid": 600,
     "time_left": 4,
-    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
+    "bids": 0
   },
   {
     "id": 6,
     "name": "Luxury Mechanical Wristwatch",
     "current_bid": 2200,
     "time_left": 1,
-    "image": "https://images.unsplash.com/photo-1519741497674-611481863552"
+    "image": "https://images.unsplash.com/photo-1519741497674-611481863552",
+    "bids": 11
   },
   {
     "id": 7,
     "name": "Limited Edition Sneakers",
     "current_bid": 750,
     "time_left": 7,
-    "image": "https://images.unsplash.com/photo-1503602642458-232111445657"
+    "image": "https://images.unsplash.com/photo-1503602642458-232111445657",
+    "bids": 3
   },
   {
     "id": 8,
     "name": "Abstract Canvas Wall Art",
     "current_bid": 390,
     "time_left": 5,
-    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    "bids": 8
   },
   {
     "id": 9,
     "name": "Minimalist Desk Lamp",
     "current_bid": 120,
     "time_left": 8,
-    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c"
+    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c",
+    "bids": 11
   },
   {
     "id": 10,
     "name": "Premium Noise-Cancelling Headphones",
     "current_bid": 900,
     "time_left": 3,
-    "image": "https://picsum.photos/seed/headphones/600/500"
+    "image": "https://picsum.photos/seed/headphones/600/500",
+    "bids": 4
   }
 ]
