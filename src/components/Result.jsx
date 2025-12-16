@@ -41,46 +41,54 @@ const Result = ({ favorites, handleRemoveFav }) => {
       </div>
 
       {/* Items List */}
-      <div className="space-y-6 mb-8">
-        {favorites.map((item) => (
-          <div
-            key={item.id}
-            className="flex items-center gap-4 pb-6 border-b border-gray-200 last:border-b-0"
-          >
-            {/* Image */}
-            <div className="w-24 h-24 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Item Details */}
-            <div className="flex-1">
-              <h3 className="text-md font-medium text-gray-300 mb-2">
-                {item.name}
-              </h3>
-              <div className="flex items-center gap-6 text-gray-200">
-                <span className="text-md font-semibold">
-                  ${item.current_bid}
-                </span>
-                <span className="text-xs">Bids: {item.bids}</span>
-              </div>
-            </div>
-
-            {/* Remove Button */}
-            <button
-              className="text-gray-400 hover:text-gray-600 flex-shrink-0 hover:cursor-pointer"
-              onClick={() => {
-                handleRemoveFav(item);
-              }}
+      {favorites.length !== 0 ? (
+        <div className="space-y-6 mb-8">
+          {favorites.map((item) => (
+            <div
+              key={item.id}
+              className="flex items-center gap-4 pb-6 border-b border-gray-200 last:border-b-0"
             >
-              <IoClose size={28} />
-            </button>
-          </div>
-        ))}
-      </div>
+              {/* Image */}
+              <div className="w-24 h-24 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Item Details */}
+              <div className="flex-1">
+                <h3 className="text-md font-medium text-gray-300 mb-2">
+                  {item.name}
+                </h3>
+                <div className="flex items-center gap-6 text-gray-200">
+                  <span className="text-md font-semibold">
+                    ${item.current_bid}
+                  </span>
+                  <span className="text-xs">Bids: {item.bids}</span>
+                </div>
+              </div>
+
+              {/* Remove Button */}
+              <button
+                className="text-gray-400 hover:text-gray-600 flex-shrink-0 hover:cursor-pointer"
+                onClick={() => {
+                  handleRemoveFav(item);
+                }}
+              >
+                <IoClose size={28} />
+              </button>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div>
+          <h2 className="text-xl font-bold text-gray-400 pb-6">
+            No Items in Wishlist
+          </h2>
+        </div>
+      )}
 
       {/* Total */}
       <div className="flex items-center justify-between pt-6 border-t border-gray-300">
