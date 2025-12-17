@@ -3,33 +3,6 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
 const Result = ({ favorites, handleRemoveFav }) => {
-  // const favoriteItems = [
-  //   {
-  //     id: 1,
-  //     title: "1965 Gibson SG Standard Electric Guitar...",
-  //     price: "$2,650",
-  //     bids: 12,
-  //     image:
-  //       "https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=400&h=400&fit=crop",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Vintage Leica M3 Camera",
-  //     price: "$2,650",
-  //     bids: 12,
-  //     image:
-  //       "https://images.unsplash.com/photo-1606933248010-ef7781c59a6f?w=400&h=400&fit=crop",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Rolex Submariner 16610",
-  //     price: "$2,650",
-  //     bids: 12,
-  //     image:
-  //       "https://images.unsplash.com/photo-1587836374492-4b90f0c1b1f7?w=400&h=400&fit=crop",
-  //   },
-  // ];
-
   const total = favorites.reduce((sum, item) => sum + item.current_bid, 0);
 
   return (
