@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Hero from "./components/Hero";
 import Items from "./components/Items";
 import Navbar from "./components/Navbar";
@@ -7,7 +7,16 @@ import FollowCursor from "./utils/FollowCursor";
 import { inFavorite } from "./utils/favoriteHelper";
 
 function App() {
-  const [favorites, setFavorites] = useState([]);
+  // Mounting Code
+  const [favorites, setFavorites] = useState(() => {
+    const saved = localStorage.getItem("saved");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  // Save to Local storage whenever state changes
+  useEffect(() => {
+    localStorage.setItem("saved", JSON.stringify(favorites));
+  }, [favorites]);
 
   const handleFav = (item) => {
     if (!inFavorite(item, favorites)) {
