@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { FaRegHeart } from "react-icons/fa";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { inFavorite } from "../utils/favoriteHelper";
 
-const Items = ({ handleFav }) => {
+const Items = ({ handleFav, favorites }) => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -40,14 +41,20 @@ const Items = ({ handleFav }) => {
               <td>${item.current_bid}</td>
               <td>{item.time_left}</td>
               <th>
-                <button
-                  className="btn btn-ghost btn-xs"
-                  onClick={() => {
-                    handleFav(item);
-                  }}
-                >
-                  <FaRegHeart size={18} className="text-gray-400" />
-                </button>
+                {inFavorite(item, favorites) ? (
+                  <button className="btn btn-ghost btn-xs" disabled>
+                    <FaHeart size={18} className="text-red-400" />
+                  </button>
+                ) : (
+                  <button
+                    className="btn btn-ghost btn-xs"
+                    onClick={() => {
+                      handleFav(item);
+                    }}
+                  >
+                    <FaRegHeart size={18} className="text-gray-400" />
+                  </button>
+                )}
               </th>
             </tr>
           ))}

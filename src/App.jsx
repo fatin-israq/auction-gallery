@@ -1,23 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Hero from "./components/Hero";
 import Items from "./components/Items";
 import Navbar from "./components/Navbar";
 import Result from "./components/Result";
 import FollowCursor from "./utils/FollowCursor";
+import { inFavorite } from "./utils/favoriteHelper";
 
 function App() {
-  const [favorites, setFavorites] = useState([]);
+  // Mounting Code
+  const [favorites, setFavorites] = useState(() => {
+    const saved = localStorage.getItem("saved");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  // Save to Local storage whenever state changes
+  useEffect(() => {
+    localStorage.setItem("saved", JSON.stringify(favorites));
+  }, [favorites]);
 
   const handleFav = (item) => {
-    const newFavorites = [...favorites, item];
-    setFavorites(newFavorites);
+    if (!inFavorite(item, favorites)) {
+      const newFavorites = [...favorites, item];
+      setFavorites(newFavorites);
+    }
   };
 
   const handleRemoveFav = (item) => {
     const newFavorites = favorites.filter((fav) => {
       return fav.id !== item.id;
     });
-    console.log(newFavorites);
     setFavorites(newFavorites);
   };
 
@@ -27,7 +38,7 @@ function App() {
       <Navbar></Navbar>
       <Hero></Hero>
       <div className="flex justify-between gap-10 m-20">
-        <Items handleFav={handleFav} />
+        <Items handleFav={handleFav} favorites={favorites} />
         <Result
           favorites={favorites}
           handleRemoveFav={handleRemoveFav}
