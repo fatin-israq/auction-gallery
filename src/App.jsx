@@ -4,20 +4,22 @@ import Items from "./components/Items";
 import Navbar from "./components/Navbar";
 import Result from "./components/Result";
 import FollowCursor from "./utils/FollowCursor";
+import { inFavorite } from "./utils/favoriteHelper";
 
 function App() {
   const [favorites, setFavorites] = useState([]);
 
   const handleFav = (item) => {
-    const newFavorites = [...favorites, item];
-    setFavorites(newFavorites);
+    if (!inFavorite(item, favorites)) {
+      const newFavorites = [...favorites, item];
+      setFavorites(newFavorites);
+    }
   };
 
   const handleRemoveFav = (item) => {
     const newFavorites = favorites.filter((fav) => {
       return fav.id !== item.id;
     });
-    console.log(newFavorites);
     setFavorites(newFavorites);
   };
 
