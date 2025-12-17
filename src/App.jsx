@@ -29,7 +29,7 @@ function App() {
       <Navbar></Navbar>
       <Hero></Hero>
       <div className="flex justify-between gap-10 m-20">
-        <Items handleFav={handleFav} />
+        <Items handleFav={handleFav} favorites={favorites} />
         <Result
           favorites={favorites}
           handleRemoveFav={handleRemoveFav}
