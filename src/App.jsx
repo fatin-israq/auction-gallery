@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Items from "./components/Items";
 import Navbar from "./components/Navbar";
 import Result from "./components/Result";
+import Footer from "./components/Footer";
 import FollowCursor from "./utils/FollowCursor";
 import { inFavorite } from "./utils/favoriteHelper";
 
@@ -44,6 +45,7 @@ function App() {
           handleRemoveFav={handleRemoveFav}
         ></Result>
       </div>
+      <Footer></Footer>
     </>
   );
 }
